@@ -16,7 +16,6 @@
 		0BF0080820FF279600CA837A /* CollectionViewNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF0080620FF279600CA837A /* CollectionViewNormalCell.xib */; };
 		0BF0080B20FF2D2500CA837A /* CollectionViewPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF0080920FF2D2500CA837A /* CollectionViewPrettyCell.swift */; };
 		0BF0080C20FF2D2500CA837A /* CollectionViewPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF0080A20FF2D2500CA837A /* CollectionViewPrettyCell.xib */; };
-		0BF0081020FF3D9F00CA837A /* 斗鱼界面展示.mov in Resources */ = {isa = PBXBuildFile; fileRef = 0BF0080E20FF3D9F00CA837A /* 斗鱼界面展示.mov */; };
 		0BF0081120FF3D9F00CA837A /* 屏幕快照 2018-07-18 下午5.18.23.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BF0080F20FF3D9F00CA837A /* 屏幕快照 2018-07-18 下午5.18.23.png */; };
 		0BFEA97020EF56A2002D9835 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFEA96F20EF56A2002D9835 /* AppDelegate.swift */; };
 		0BFEA97520EF56A2002D9835 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BFEA97320EF56A2002D9835 /* Main.storyboard */; };
@@ -62,7 +61,6 @@
 		0BF0080620FF279600CA837A /* CollectionViewNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewNormalCell.xib; sourceTree = "<group>"; };
 		0BF0080920FF2D2500CA837A /* CollectionViewPrettyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewPrettyCell.swift; sourceTree = "<group>"; };
 		0BF0080A20FF2D2500CA837A /* CollectionViewPrettyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewPrettyCell.xib; sourceTree = "<group>"; };
-		0BF0080E20FF3D9F00CA837A /* 斗鱼界面展示.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "斗鱼界面展示.mov"; sourceTree = "<group>"; };
 		0BF0080F20FF3D9F00CA837A /* 屏幕快照 2018-07-18 下午5.18.23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "屏幕快照 2018-07-18 下午5.18.23.png"; sourceTree = "<group>"; };
 		0BFEA96C20EF56A2002D9835 /* DouYuTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYuTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BFEA96F20EF56A2002D9835 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,7 +113,6 @@
 		0BF0080D20FF3D9F00CA837A /* image_show */ = {
 			isa = PBXGroup;
 			children = (
-				0BF0080E20FF3D9F00CA837A /* 斗鱼界面展示.mov */,
 				0BF0080F20FF3D9F00CA837A /* 屏幕快照 2018-07-18 下午5.18.23.png */,
 			);
 			path = image_show;
@@ -406,7 +403,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BF0081020FF3D9F00CA837A /* 斗鱼界面展示.mov in Resources */,
 				0BFEA97A20EF56A3002D9835 /* LaunchScreen.storyboard in Resources */,
 				0BF0080420FF14CD00CA837A /* CollectionHeaderView.xib in Resources */,
 				0BFEA9D020F248DD002D9835 /* Home.storyboard in Resources */,

@@ -153,7 +153,7 @@ extension PageContentView:UICollectionViewDelegate{
             }
         }
         delegate?.pageContentView(contentView: self, progress: progress, sourceIndex: sourceIndex, targetIndex: tagetIndex)
-        print("progress:\(progress) sourceIndex:\(sourceIndex) targetIndex:\(tagetIndex)")
+//        print("progress:\(progress) sourceIndex:\(sourceIndex) targetIndex:\(tagetIndex)")
         
      }
 }

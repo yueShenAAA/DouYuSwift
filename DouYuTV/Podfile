@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+ platform :ios, '9.0'
+
+target 'DouYuTV' do
+  use_frameworks!
+  #网络请求
+  pod 'Alamofire', '~> 4.7.2'
+  #json转model
+  pod 'HandyJSON', '~> 4.1.1'
+  #下载网络图片
+  pod 'Kingfisher', '~> 4.7.0'
+  target 'DouYuTVTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'DouYuTVUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

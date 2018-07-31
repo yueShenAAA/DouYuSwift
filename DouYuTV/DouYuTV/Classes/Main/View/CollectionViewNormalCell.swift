@@ -8,11 +8,16 @@
 
 import UIKit
 
-class CollectionViewNormalCell: UICollectionViewCell {
+class CollectionViewNormalCell: CollectionViewBaseCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var detailLabel: UILabel!
+    
+    override var anthorModel : AnthorModel? {
+            didSet{
+                    super.anthorModel = anthorModel
+                    detailLabel.text = anthorModel?.nickname
+                }
     }
-
+    
+    
 }

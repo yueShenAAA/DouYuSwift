@@ -117,19 +117,23 @@ extension PageTitleView {
     @objc private func touchLabelClick(tap:UITapGestureRecognizer){
         //1.获取当前点击的label
        guard let currentLabel = tap.view as? UILabel else {return}
-        //2.获取之前的label
+        //2.判断点击的是否是同意个label
+        if currentLabel.tag == currentIndex {
+            return
+        }
+        //3.获取之前的label
         let oldLab = titleLabels[currentIndex]
-        //3.更新文字的颜色
+        //4.更新文字的颜色
         currentLabel.textColor = UIColor(r: kSelectedColor.0, g: kSelectedColor.1, b: kSelectedColor.2)
         oldLab.textColor = UIColor(r: kNormalColor.0, g: kNormalColor.1, b: kNormalColor.2)
-        //4.保存最新label 的下标
+        //5.保存最新label 的下标
         currentIndex = currentLabel.tag
-        //5.设置下标滑块坐标
+        //6.设置下标滑块坐标
         let scrollLineX:CGFloat = CGFloat(currentLabel.tag) * scrollLine.frame.size.width
         UIView.animate(withDuration: 0.15) {
             self.scrollLine.frame.origin.x = scrollLineX
         }
-        //6.通知代理做事
+        //7 .通知代理做事
         delegate?.pageTitleView(titleView: self, selectIndex: currentIndex)
         
     }

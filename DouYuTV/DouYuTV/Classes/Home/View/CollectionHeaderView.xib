@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR">
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="CollectionHeaderView" customModule="DouYuTV" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
@@ -60,6 +60,10 @@
                 <constraint firstItem="mow-gF-42U" firstAttribute="top" secondItem="VXr-Tz-HHm" secondAttribute="top" id="v14-vn-82V"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="headImageView" destination="HAT-nT-h4b" id="nBM-NS-45P"/>
+                <outlet property="titleLabel" destination="kMv-pP-6W6" id="wtn-q8-SXs"/>
+            </connections>
             <point key="canvasLocation" x="29" y="78"/>
         </collectionReusableView>
     </objects>

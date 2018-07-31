@@ -20,6 +20,7 @@
 		0B19A0D8210EFE4500FF1A06 /* RecommendGameListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B19A0D7210EFE4400FF1A06 /* RecommendGameListView.xib */; };
 		0B19A0DB21102CE800FF1A06 /* CollectionViewGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B19A0D921102CE800FF1A06 /* CollectionViewGameCell.swift */; };
 		0B19A0DC21102CE800FF1A06 /* CollectionViewGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B19A0DA21102CE800FF1A06 /* CollectionViewGameCell.xib */; };
+		0B19A0DE2110441200FF1A06 /* 屏幕快照 2018-07-31 下午3.15.07.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B19A0DD2110441200FF1A06 /* 屏幕快照 2018-07-31 下午3.15.07.png */; };
 		0BF007FC20F8A3CE00CA837A /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF007FB20F8A3CE00CA837A /* PageContentView.swift */; };
 		0BF007FE20FC63D600CA837A /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF007FD20FC63D600CA837A /* UIColor-Extension.swift */; };
 		0BF0080020FEDBFB00CA837A /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF007FF20FEDBFB00CA837A /* RecommendViewController.swift */; };
@@ -29,7 +30,6 @@
 		0BF0080820FF279600CA837A /* CollectionViewNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF0080620FF279600CA837A /* CollectionViewNormalCell.xib */; };
 		0BF0080B20FF2D2500CA837A /* CollectionViewPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF0080920FF2D2500CA837A /* CollectionViewPrettyCell.swift */; };
 		0BF0080C20FF2D2500CA837A /* CollectionViewPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF0080A20FF2D2500CA837A /* CollectionViewPrettyCell.xib */; };
-		0BF0081120FF3D9F00CA837A /* 屏幕快照 2018-07-18 下午5.18.23.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BF0080F20FF3D9F00CA837A /* 屏幕快照 2018-07-18 下午5.18.23.png */; };
 		0BF008512103502700CA837A /* NetworkingTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF008502103502700CA837A /* NetworkingTools.swift */; };
 		0BF008542103658600CA837A /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF008532103658600CA837A /* RecommendViewModel.swift */; };
 		0BFEA97020EF56A2002D9835 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFEA96F20EF56A2002D9835 /* AppDelegate.swift */; };
@@ -84,6 +84,7 @@
 		0B19A0D7210EFE4400FF1A06 /* RecommendGameListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendGameListView.xib; sourceTree = "<group>"; };
 		0B19A0D921102CE800FF1A06 /* CollectionViewGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewGameCell.swift; sourceTree = "<group>"; };
 		0B19A0DA21102CE800FF1A06 /* CollectionViewGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewGameCell.xib; sourceTree = "<group>"; };
+		0B19A0DD2110441200FF1A06 /* 屏幕快照 2018-07-31 下午3.15.07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "屏幕快照 2018-07-31 下午3.15.07.png"; sourceTree = "<group>"; };
 		0BF007FB20F8A3CE00CA837A /* PageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		0BF007FD20FC63D600CA837A /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		0BF007FF20FEDBFB00CA837A /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
@@ -93,7 +94,6 @@
 		0BF0080620FF279600CA837A /* CollectionViewNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewNormalCell.xib; sourceTree = "<group>"; };
 		0BF0080920FF2D2500CA837A /* CollectionViewPrettyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewPrettyCell.swift; sourceTree = "<group>"; };
 		0BF0080A20FF2D2500CA837A /* CollectionViewPrettyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewPrettyCell.xib; sourceTree = "<group>"; };
-		0BF0080F20FF3D9F00CA837A /* 屏幕快照 2018-07-18 下午5.18.23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "屏幕快照 2018-07-18 下午5.18.23.png"; sourceTree = "<group>"; };
 		0BF008502103502700CA837A /* NetworkingTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingTools.swift; sourceTree = "<group>"; };
 		0BF008532103658600CA837A /* RecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewModel.swift; sourceTree = "<group>"; };
 		0BFEA96C20EF56A2002D9835 /* DouYuTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYuTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,7 +171,7 @@
 		0BF0080D20FF3D9F00CA837A /* image_show */ = {
 			isa = PBXGroup;
 			children = (
-				0BF0080F20FF3D9F00CA837A /* 屏幕快照 2018-07-18 下午5.18.23.png */,
+				0B19A0DD2110441200FF1A06 /* 屏幕快照 2018-07-31 下午3.15.07.png */,
 			);
 			path = image_show;
 			sourceTree = "<group>";
@@ -505,6 +505,7 @@
 				0BFEA9D020F248DD002D9835 /* Home.storyboard in Resources */,
 				0BFEA9D120F248DD002D9835 /* Live.storyboard in Resources */,
 				0B19A0D4210ED7B000FF1A06 /* CollectionViewCycleCell.xib in Resources */,
+				0B19A0DE2110441200FF1A06 /* 屏幕快照 2018-07-31 下午3.15.07.png in Resources */,
 				0B19A0D8210EFE4500FF1A06 /* RecommendGameListView.xib in Resources */,
 				0BF0080C20FF2D2500CA837A /* CollectionViewPrettyCell.xib in Resources */,
 				0B19A0CE210B062000FF1A06 /* RecommendCycle.xib in Resources */,
@@ -512,7 +513,6 @@
 				0BF0080820FF279600CA837A /* CollectionViewNormalCell.xib in Resources */,
 				0BFEA97520EF56A2002D9835 /* Main.storyboard in Resources */,
 				0B19A0DC21102CE800FF1A06 /* CollectionViewGameCell.xib in Resources */,
-				0BF0081120FF3D9F00CA837A /* 屏幕快照 2018-07-18 下午5.18.23.png in Resources */,
 				0BFEA9D720F249B1002D9835 /* Profile.storyboard in Resources */,
 				0BFEA9CF20F248DD002D9835 /* Follow.storyboard in Resources */,
 			);

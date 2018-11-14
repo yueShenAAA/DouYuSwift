@@ -12,7 +12,7 @@ import HandyJSON
 class AnthorGroup: HandyJSON {
 
     //该组中是房间房间信息
-     var room_list : [AnthorModel]?
+    var room_list : [AnthorModel]?
     //图标
     var small_icon_url:String?
     //图片

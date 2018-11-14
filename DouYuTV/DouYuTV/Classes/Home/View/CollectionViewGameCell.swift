@@ -18,9 +18,21 @@ class CollectionViewGameCell: UICollectionViewCell {
             guard let groupData = group else {
                 return
             }
-        
+            
             titleLabel.text = groupData.tag_name
-            titleImageV.kf.setImage(with: ImageResource(downloadURL: URL.init(string: groupData.icon_url ?? "")!, cacheKey: nil), placeholder: Image(named: "home_more_btn"), options: nil, progressBlock: nil, completionHandler: nil)
+            
+            if groupData.icon_url == "" {
+                return
+            }
+            titleImageV.kf.setImage(with: ImageResource(downloadURL: URL.init(string: groupData.icon_url ?? "")!, cacheKey: nil), placeholder: Image(named: "home_more_btn"))
+        }
+    }
+    
+    var gameModel: GameModel?{
+        didSet{
+            guard let model = gameModel else{ return }
+            titleLabel.text = model.tag_name
+            titleImageV.kf.setImage(with:ImageResource(downloadURL: URL(string: model.pic_url ?? "")!,cacheKey: nil), placeholder: Image(named: "home_more_btn"))
         }
     }
     

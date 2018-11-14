@@ -11,6 +11,7 @@ import Kingfisher
 
 class CollectionHeaderView: UICollectionReusableView {
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var moreBtn: UIButton!
     @IBOutlet weak var headImageView: UIImageView!
     var group : AnthorGroup?{
         didSet {
@@ -27,6 +28,11 @@ class CollectionHeaderView: UICollectionReusableView {
             
         }
     }
-    
-    
+}
+
+// MARK:从xib中快速创建该类的方法
+extension CollectionHeaderView{
+   class func collectionHeadView() -> CollectionHeaderView {
+        return Bundle.main.loadNibNamed("CollectionHeaderView", owner: nil, options: nil)?.first as! CollectionHeaderView
+    }
 }

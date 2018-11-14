@@ -27,6 +27,8 @@ class AnthorModel: HandyJSON {
     //所在城市
      var anchor_city:String? = ""
     
-    required init() {}
+    required init() {
+
+    }
     
 }

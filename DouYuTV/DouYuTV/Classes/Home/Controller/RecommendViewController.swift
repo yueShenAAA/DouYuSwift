@@ -90,7 +90,6 @@ extension RecommendViewController{
         }
         //2.请求轮播图数据
         viewModel.requestCycleData {
-            print("轮播图 数据请求完成")
             self.recommendCycleView.anthorModels = self.viewModel.cycleArray
         }
     }

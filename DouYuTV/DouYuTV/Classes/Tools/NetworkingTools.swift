@@ -24,7 +24,6 @@ class NetworkingTools {
         Alamofire.request(URLSting, method: method, parameters: parameters, encoding: encoding, headers: headers).responseJSON { (dataResponse) in
             
             guard dataResponse.result.value != nil else{
-                print(dataResponse.error as Any)
                 return
             }
             finshedCallBack(dataResponse.result.value as AnyObject)

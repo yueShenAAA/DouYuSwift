@@ -120,7 +120,6 @@ extension RecommendViewModel{
                 }
             }
             
-            print(result)
             finishCallBack()
         }
     }

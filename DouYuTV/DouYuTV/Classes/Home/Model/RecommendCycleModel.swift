@@ -22,6 +22,5 @@ class RecommendCycleModel: HandyJSON {
     
     var anthor : AnthorModel?
     
-    
     required init() {}
 }

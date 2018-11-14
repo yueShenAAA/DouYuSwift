@@ -21,6 +21,15 @@
 		0B19A0DB21102CE800FF1A06 /* CollectionViewGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B19A0D921102CE800FF1A06 /* CollectionViewGameCell.swift */; };
 		0B19A0DC21102CE800FF1A06 /* CollectionViewGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B19A0DA21102CE800FF1A06 /* CollectionViewGameCell.xib */; };
 		0B19A0DE2110441200FF1A06 /* 屏幕快照 2018-07-31 下午3.15.07.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B19A0DD2110441200FF1A06 /* 屏幕快照 2018-07-31 下午3.15.07.png */; };
+		0BE311182192BBCD00C4E870 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE311172192BBCD00C4E870 /* GameViewController.swift */; };
+		0BE3111A2192CA0D00C4E870 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE311192192CA0D00C4E870 /* GameViewModel.swift */; };
+		0BE3111C2192D48100C4E870 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3111B2192D48100C4E870 /* GameModel.swift */; };
+		0BE3112021951E2600C4E870 /* AmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3111F21951E2600C4E870 /* AmuseViewController.swift */; };
+		0BE31122219527AF00C4E870 /* AmuseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE31121219527AF00C4E870 /* AmuseViewModel.swift */; };
+		0BE31124219A93D000C4E870 /* AmuseMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE31123219A93D000C4E870 /* AmuseMenuView.swift */; };
+		0BE31126219A93EA00C4E870 /* AmuseMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BE31125219A93EA00C4E870 /* AmuseMenuView.xib */; };
+		0BE31129219BBF6F00C4E870 /* AmuseMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE31127219BBF6F00C4E870 /* AmuseMenuCell.swift */; };
+		0BE3112A219BBF6F00C4E870 /* AmuseMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BE31128219BBF6F00C4E870 /* AmuseMenuCell.xib */; };
 		0BF007FC20F8A3CE00CA837A /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF007FB20F8A3CE00CA837A /* PageContentView.swift */; };
 		0BF007FE20FC63D600CA837A /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF007FD20FC63D600CA837A /* UIColor-Extension.swift */; };
 		0BF0080020FEDBFB00CA837A /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF007FF20FEDBFB00CA837A /* RecommendViewController.swift */; };
@@ -85,6 +94,15 @@
 		0B19A0D921102CE800FF1A06 /* CollectionViewGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewGameCell.swift; sourceTree = "<group>"; };
 		0B19A0DA21102CE800FF1A06 /* CollectionViewGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewGameCell.xib; sourceTree = "<group>"; };
 		0B19A0DD2110441200FF1A06 /* 屏幕快照 2018-07-31 下午3.15.07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "屏幕快照 2018-07-31 下午3.15.07.png"; sourceTree = "<group>"; };
+		0BE311172192BBCD00C4E870 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		0BE311192192CA0D00C4E870 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		0BE3111B2192D48100C4E870 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		0BE3111F21951E2600C4E870 /* AmuseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseViewController.swift; sourceTree = "<group>"; };
+		0BE31121219527AF00C4E870 /* AmuseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseViewModel.swift; sourceTree = "<group>"; };
+		0BE31123219A93D000C4E870 /* AmuseMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseMenuView.swift; sourceTree = "<group>"; };
+		0BE31125219A93EA00C4E870 /* AmuseMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmuseMenuView.xib; sourceTree = "<group>"; };
+		0BE31127219BBF6F00C4E870 /* AmuseMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseMenuCell.swift; sourceTree = "<group>"; };
+		0BE31128219BBF6F00C4E870 /* AmuseMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmuseMenuCell.xib; sourceTree = "<group>"; };
 		0BF007FB20F8A3CE00CA837A /* PageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		0BF007FD20FC63D600CA837A /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		0BF007FF20FEDBFB00CA837A /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				0BF008532103658600CA837A /* RecommendViewModel.swift */,
+				0BE311192192CA0D00C4E870 /* GameViewModel.swift */,
+				0BE31121219527AF00C4E870 /* AmuseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -318,6 +338,10 @@
 				0B19A0D7210EFE4400FF1A06 /* RecommendGameListView.xib */,
 				0B19A0D921102CE800FF1A06 /* CollectionViewGameCell.swift */,
 				0B19A0DA21102CE800FF1A06 /* CollectionViewGameCell.xib */,
+				0BE31123219A93D000C4E870 /* AmuseMenuView.swift */,
+				0BE31125219A93EA00C4E870 /* AmuseMenuView.xib */,
+				0BE31127219BBF6F00C4E870 /* AmuseMenuCell.swift */,
+				0BE31128219BBF6F00C4E870 /* AmuseMenuCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -326,6 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				0B19A0CF210EB0D400FF1A06 /* RecommendCycleModel.swift */,
+				0BE3111B2192D48100C4E870 /* GameModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -336,6 +361,8 @@
 				0BFEA9CB20F248DC002D9835 /* Home.storyboard */,
 				0BFEA9D820F24C49002D9835 /* HomeViewController.swift */,
 				0BF007FF20FEDBFB00CA837A /* RecommendViewController.swift */,
+				0BE311172192BBCD00C4E870 /* GameViewController.swift */,
+				0BE3111F21951E2600C4E870 /* AmuseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -507,12 +534,14 @@
 				0B19A0D4210ED7B000FF1A06 /* CollectionViewCycleCell.xib in Resources */,
 				0B19A0DE2110441200FF1A06 /* 屏幕快照 2018-07-31 下午3.15.07.png in Resources */,
 				0B19A0D8210EFE4500FF1A06 /* RecommendGameListView.xib in Resources */,
+				0BE3112A219BBF6F00C4E870 /* AmuseMenuCell.xib in Resources */,
 				0BF0080C20FF2D2500CA837A /* CollectionViewPrettyCell.xib in Resources */,
 				0B19A0CE210B062000FF1A06 /* RecommendCycle.xib in Resources */,
 				0BFEA97720EF56A3002D9835 /* Assets.xcassets in Resources */,
 				0BF0080820FF279600CA837A /* CollectionViewNormalCell.xib in Resources */,
 				0BFEA97520EF56A2002D9835 /* Main.storyboard in Resources */,
 				0B19A0DC21102CE800FF1A06 /* CollectionViewGameCell.xib in Resources */,
+				0BE31126219A93EA00C4E870 /* AmuseMenuView.xib in Resources */,
 				0BFEA9D720F249B1002D9835 /* Profile.storyboard in Resources */,
 				0BFEA9CF20F248DD002D9835 /* Follow.storyboard in Resources */,
 			);
@@ -620,16 +649,23 @@
 			files = (
 				0BFEA9DB20F24C61002D9835 /* MainViewController.swift in Sources */,
 				0BF0080320FF14CD00CA837A /* CollectionHeaderView.swift in Sources */,
+				0BE31122219527AF00C4E870 /* AmuseViewModel.swift in Sources */,
+				0BE31124219A93D000C4E870 /* AmuseMenuView.swift in Sources */,
+				0BE31129219BBF6F00C4E870 /* AmuseMenuCell.swift in Sources */,
 				0BF007FE20FC63D600CA837A /* UIColor-Extension.swift in Sources */,
+				0BE3111A2192CA0D00C4E870 /* GameViewModel.swift in Sources */,
 				0BF0080020FEDBFB00CA837A /* RecommendViewController.swift in Sources */,
+				0BE311182192BBCD00C4E870 /* GameViewController.swift in Sources */,
 				0BFEA97020EF56A2002D9835 /* AppDelegate.swift in Sources */,
 				0B19A0C621044B5600FF1A06 /* AnthorGroup.swift in Sources */,
 				0BF0080720FF279600CA837A /* CollectionViewNormalCell.swift in Sources */,
 				0B19A0D0210EB0D400FF1A06 /* RecommendCycleModel.swift in Sources */,
 				0BFEA9E620F33374002D9835 /* PageTitleView.swift in Sources */,
+				0BE3111C2192D48100C4E870 /* GameModel.swift in Sources */,
 				0B19A0D3210ED7B000FF1A06 /* CollectionViewCycleCell.swift in Sources */,
 				0B19A0C821045D2900FF1A06 /* AnthorModel.swift in Sources */,
 				0B19A0CA210AC3FA00FF1A06 /* CollectionViewBaseCell.swift in Sources */,
+				0BE3112021951E2600C4E870 /* AmuseViewController.swift in Sources */,
 				0BF008512103502700CA837A /* NetworkingTools.swift in Sources */,
 				0B19A0D6210EFE3500FF1A06 /* RecommendGameListView.swift in Sources */,
 				0B19A0DB21102CE800FF1A06 /* CollectionViewGameCell.swift in Sources */,

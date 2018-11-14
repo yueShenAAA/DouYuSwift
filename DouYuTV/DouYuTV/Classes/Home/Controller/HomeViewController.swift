@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     private lazy var pageTitleView : PageTitleView = {[weak self] in
         
         let rect = CGRect(x: 0, y: kStatusBarH + kNavigationBarH, width: kScreenW, height: kTitleViewH)
-        let titles:[String] = ["推荐","娱乐","游戏","趣玩"]
+        let titles:[String] = ["推荐","游戏","娱乐","趣玩"]
         let titleView = PageTitleView.init(frame: rect, titles: titles)
         titleView.delegate = self
         return titleView
@@ -28,7 +28,9 @@ class HomeViewController: UIViewController {
         // Mark - 创建所有子控制器
         var childVcs = [UIViewController]()
         childVcs.append(RecommendViewController())
-        for _ in 0..<3{
+        childVcs.append(GameViewController())
+        childVcs.append(AmuseViewController())
+        for _ in 0..<1{
             let vc = UIViewController()
             vc.view.backgroundColor = UIColor.init(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
             childVcs.append(vc)
@@ -42,7 +44,6 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         setUpUI()
     }
-    
 }
 
 extension HomeViewController{
@@ -68,19 +69,16 @@ extension HomeViewController{
         let searchItem = UIBarButtonItem(imageName: "btn_search", highImageName: "btn_search_clicked", size: size)
         let scanningItem = UIBarButtonItem(imageName: "Image_scan", highImageName: "Image_scan_click", size: size)
         
-        
         navigationItem.rightBarButtonItems = [historyItem,searchItem,scanningItem]
         
     }
 }
-
 
 // Mark - 遵守PageTitleViewDelegate
 extension HomeViewController: PageTitleViewDelegate {
 
     func pageTitleView(titleView: PageTitleView, selectIndex index: Int) {
         
-        print(index) 
         self.pageContentView.setCurrentIndex(currentIndex: index)
     }
 }

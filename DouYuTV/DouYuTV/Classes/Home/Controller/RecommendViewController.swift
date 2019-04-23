@@ -19,7 +19,7 @@ private let kHeadViewH : CGFloat = 50
 private let kCycleViewH : CGFloat = kScreenW * 3/8
 private let kGameListViewH : CGFloat = 90
 
-class RecommendViewController: UIViewController {
+class RecommendViewController: BaseViewController {
     // MARK - 懒加载 viewModel 属性
     private lazy var viewModel:RecommendViewModel = RecommendViewModel()
     // MARK - 懒加载 collectionView 属性
@@ -34,7 +34,7 @@ class RecommendViewController: UIViewController {
         let collectionV = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         collectionV.register(UINib.init(nibName: "CollectionViewNormalCell", bundle: nil), forCellWithReuseIdentifier: kNormalCollectionCellIdentifier)
         collectionV.register(UINib.init(nibName: "CollectionViewPrettyCell", bundle: nil), forCellWithReuseIdentifier: kPrettyCollectionCellIdentifier)
-        collectionV.register(UINib.init(nibName: "CollectionHeaderView", bundle:nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kNormalHeadViewID)
+        collectionV.register(UINib.init(nibName: "CollectionHeaderView", bundle:nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: kNormalHeadViewID)
         collectionV.dataSource = self
         collectionV.delegate = self
         collectionV.backgroundColor = UIColor.white
@@ -68,7 +68,8 @@ class RecommendViewController: UIViewController {
 }
 
 extension RecommendViewController{
-    func setupUI() {
+    //重写父类方法
+    override func setupUI() {
         //1.添加collectionView
         view.addSubview(collectionView)
         //2.添加轮播试图
@@ -77,7 +78,10 @@ extension RecommendViewController{
         collectionView.addSubview(recommendGameListView)
         //3.设置collectionView的内边距
         collectionView.contentInset = UIEdgeInsets.init(top: kCycleViewH + kGameListViewH, left: 0, bottom: 0, right: 0 )
-        
+        //4.把collectionView赋值给父类
+        contentView = collectionView
+        //5.调用父类方法
+        super.setupUI()
     }
 }
 // MARK - 请求数据
@@ -87,6 +91,8 @@ extension RecommendViewController{
         viewModel.requestData {
             self.collectionView.reloadData()
             self.recommendGameListView.groups = self.viewModel.anthorGroups
+            //3.隐藏loading，显示界面
+            self.hiddenLoad()
         }
         //2.请求轮播图数据
         viewModel.requestCycleData {
@@ -134,7 +140,14 @@ extension RecommendViewController: UICollectionViewDataSource{
         
     }
 }
-
+// MARK:遵守UICollectionViewDelegate代理协议
+extension RecommendViewController : UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let anthor = viewModel.anthorGroups [indexPath.section].anthorModels[indexPath.item]
+        //判断是手机直播还是电脑直播
+        anthor.isVertical == 0 ? pushNormalRoomViewController() :presentShowRoomViewController()
+    }
+}
 // MARK - 实现UICollectionViewDelegateFlowLayout协议方法
 extension RecommendViewController : UICollectionViewDelegateFlowLayout{
     
@@ -146,7 +159,15 @@ extension RecommendViewController : UICollectionViewDelegateFlowLayout{
     }
 }
 
-
+extension RecommendViewController  {
+    private func presentShowRoomViewController(){
+        self.present(RoomShowViewController(), animated: true, completion: nil)
+    }
+    
+    private func pushNormalRoomViewController(){
+        self.navigationController?.pushViewController(RoomNormalViewController(), animated: true)
+    }
+}
 
 
 

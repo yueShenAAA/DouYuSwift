@@ -18,7 +18,7 @@ private let kPrettyItemH : CGFloat = kItemW * 4/3
 private let kHeadViewH : CGFloat = 50
 private let kAmuseMenuViewH : CGFloat = 200
 
-class AmuseViewController: UIViewController {
+class AmuseViewController: BaseViewController {
     
     // MARK:懒加载属性
     fileprivate lazy var collectionView : UICollectionView = { [unowned self] in
@@ -32,7 +32,7 @@ class AmuseViewController: UIViewController {
         let collectionV = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         collectionV.register(UINib.init(nibName: "CollectionViewNormalCell", bundle: nil), forCellWithReuseIdentifier: kNormalCollectionCellIdentifier)
         collectionV.register(UINib.init(nibName: "CollectionViewPrettyCell", bundle: nil), forCellWithReuseIdentifier: kPrettyCollectionCellIdentifier)
-        collectionV.register(UINib.init(nibName: "CollectionHeaderView", bundle:nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kNormalHeadViewID)
+        collectionV.register(UINib.init(nibName: "CollectionHeaderView", bundle:nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: kNormalHeadViewID)
         collectionV.dataSource = self
         collectionV.delegate = self
         collectionV.backgroundColor = UIColor.white
@@ -57,10 +57,18 @@ class AmuseViewController: UIViewController {
 
 // MARK:搭建UI界面
 extension AmuseViewController{
-    fileprivate func setupUI() {
+    //重写父类方法
+    override func setupUI() {
+        //1.添加collectionView
         view.addSubview(collectionView)
+        //2.collectionView添加头部视图
         collectionView.addSubview(amuseMenuView)
+        //3.设置collectionView的内边距
         collectionView.contentInset = UIEdgeInsets(top: kAmuseMenuViewH, left: 0, bottom: 0, right: 0)
+        //4.把collectionView赋值给父类
+        contentView = collectionView
+        //5.调用父类方法
+        super.setupUI()
     }
 }
 // MARK:请求数据
@@ -73,11 +81,13 @@ extension AmuseViewController{
             var newGroups = self.amuseVM.anthorGroups
             newGroups?.removeFirst()
             self.amuseMenuView.groups = newGroups
+            //隐藏loading，显示界面
+            self.hiddenLoad()
         }
     }
 }
-// MARK:实现UICollectionViewDataSource&UICollectionViewDelegate 代理协议
-extension AmuseViewController:UICollectionViewDelegate,UICollectionViewDataSource{
+// MARK:实现UICollectionViewDataSource代理协议
+extension AmuseViewController:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return amuseVM.anthorGroups?[section].room_list?.count ?? 0
@@ -106,4 +116,22 @@ extension AmuseViewController:UICollectionViewDelegate,UICollectionViewDataSourc
     }
     
     
+}
+// MARK:遵守UICollectionViewDelegate代理协议
+extension AmuseViewController : UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let anthor = amuseVM.anthorGroups?[indexPath.section].room_list?[indexPath.item]
+        //判断是手机直播还是电脑直播
+        anthor?.isVertical == 0 ?pushNormalRoomViewController():presentShowRoomViewController()
+    }
+}
+
+extension AmuseViewController  {
+    private func presentShowRoomViewController(){
+        self.present(RoomShowViewController(), animated: true, completion: nil)
+    }
+    
+    private func pushNormalRoomViewController(){
+        self.navigationController?.pushViewController(RoomNormalViewController(), animated: true)
+    }
 }

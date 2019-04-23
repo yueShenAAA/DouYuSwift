@@ -16,7 +16,7 @@ fileprivate let kGameHeadH:CGFloat = 90
 fileprivate let kCellID = "CollectionViewGameCell"
 fileprivate let kConllectionViewHeadID = "CollectionHeaderView"
 
-class GameViewController: UIViewController {
+class GameViewController: BaseViewController {
 // MARK:懒加载属性
     fileprivate lazy var collectionView : UICollectionView = {[unowned self] in
         //1.创建布局
@@ -30,7 +30,7 @@ class GameViewController: UIViewController {
         let collectionView = UICollectionView(frame:self.view.bounds , collectionViewLayout: layout)
         collectionView.register(UINib.init(nibName: "CollectionViewGameCell", bundle: nil), forCellWithReuseIdentifier: kCellID)
         
-        collectionView.register(UINib.init(nibName:"CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kConllectionViewHeadID)
+        collectionView.register(UINib.init(nibName:"CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: kConllectionViewHeadID)
         
         collectionView.dataSource = self
         collectionView.backgroundColor = UIColor.white
@@ -66,7 +66,8 @@ class GameViewController: UIViewController {
 }
 // MARK:搭建UI界面
 extension GameViewController{
-    fileprivate func setupUI(){
+    //重写父类方法
+    override func setupUI(){
         //1.添加collectionView
         view.addSubview(collectionView)
         //2.添加collectionViewHead
@@ -74,6 +75,10 @@ extension GameViewController{
         collectionView.addSubview(gameView)
         //3.设置collectionView 的内边距
         collectionView.contentInset = UIEdgeInsets(top: kHeaderH + kGameHeadH, left: 0, bottom: 0, right: 0)
+        //4.把collectionView赋值给父类
+        contentView = collectionView
+        //5.调用父类方法
+        super.setupUI()
     }
 }
 // MARK:数据请求
@@ -85,7 +90,8 @@ extension GameViewController{
             //2.展示常用游戏
             self.gameView.isHome = false
             self.gameView.games = Array(self.viewModel.gameDataArray[0..<10]) as? [GameModel]
-            
+            //3.隐藏loading，显示界面
+            self.hiddenLoad()
         }
     }
 }

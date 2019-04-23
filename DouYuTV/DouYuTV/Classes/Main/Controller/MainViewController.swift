@@ -23,7 +23,7 @@ class MainViewController: UITabBarController {
         //1.通过storyboard获取控制器
         let childVc = UIStoryboard(name: storyboradName, bundle: nil).instantiateInitialViewController()!//传nil就是mainboundle里面的
         //2.将childVC添加为子控制器
-        addChildViewController(childVc)
+        addChild(childVc)
     }
 
     override func didReceiveMemoryWarning() {

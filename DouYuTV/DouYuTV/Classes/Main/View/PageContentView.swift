@@ -57,7 +57,7 @@ extension PageContentView {
     private func setupUI(){
         // Mark - 将所有子控制器加进来
         for vc in childVcs {
-            parentVc?.addChildViewController(vc)
+            parentVc?.addChild(vc)
         }
         // Mark - 添加一个collectionView,用其cell来存放控制器的view
         addSubview(collectionView)

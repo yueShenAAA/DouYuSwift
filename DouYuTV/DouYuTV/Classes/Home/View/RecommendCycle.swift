@@ -97,7 +97,7 @@ extension RecommendCycle{
         //创建timer
         cycleTimer = Timer.init(timeInterval: 3.0, target: self, selector: #selector(scrollToNext), userInfo: nil, repeats: true)
         //添加到runloop
-        RunLoop.main.add(cycleTimer!, forMode: .commonModes)
+        RunLoop.main.add(cycleTimer!, forMode: RunLoop.Mode.common)
     }
     
     private func removeCycleTimer(){
